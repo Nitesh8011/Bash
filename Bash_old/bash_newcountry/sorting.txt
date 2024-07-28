@@ -1,0 +1,15 @@
+sort [OPTIONS] [FILE]
+
+Here are some common options for the sort command:
+
+-r: Sort in reverse order (i.e., descending instead of ascending).
+-n: Sort numerically instead of alphabetically.
+-k <column>: Sort by a specific column in a file, specified as a number starting from 1.
+-u: Only output unique lines (i.e., remove duplicates).
+-f: Ignore case when sorting.
+
+
+This command tells sort to use tabs ($'\t') as the field separator
+sort -rn -k2 -t$'\t' & sort  -nr -k2 -t $'|'
+
+

@@ -1,0 +1,45 @@
+#In Bash, the cut command is used to extract sections of a file or a line of text.
+#The -c option is used with the cut command to specify the characters that should be extracted from each line of text.
+
+#cut in bash
+cut -c 2
+
+#cut two number
+cut -c 2,7
+
+#Cut in range 
+cut -c 2-7
+
+#for full line to execute
+cut -c 13-
+
+#The -f option means the first. So this command prints the first 1 to 3 lines substring from the input
+cut -f 1-3
+
+#The -d option specifies the delimiter to use, in this case ' '. The -f option specifies the field to extract, in this case the 4th field.
+cut -d " " -f4
+cut -d " " -f1-3
+
+#to show first 20line repetative
+while read line
+do
+    echo $line >> file.txt
+done
+head -n 20 < file.txt
+
+#sed is used to print the line and p is for the print the selected line
+sed -n '12,22p'
+
+#to display last 20line & 20character
+tail -n 20 & tail -c 20
+
+#tr used for exchange & delimite
+tr "()" "[]" & tr -d [a-z]
+
+#remove multiple space with one
+while read line
+do
+    echo $line | tr "  " " "
+done
+
+
